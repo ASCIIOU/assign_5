@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="mycss.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="btn-group">
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" id="city">
+          臺北市 <span class="caret"></span>
+        </button>
+
+        <ul id="dropdown" class="dropdown-menu" role="menu">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">臺北市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">新北市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">臺中市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">臺南市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">高雄市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">基隆市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">桃園市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">新竹市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">新竹縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">苗栗縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">彰化縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">南投縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">雲林縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">嘉義市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">嘉義縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">屏東縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">宜蘭縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">花蓮縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">台東縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">澎湖縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">金門縣</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">連江縣</a></li>
+        </ul>
+
+      </div>
+      
+      <div><span class="temperature"></span> &#8451;</div>
+    </div>
+    <div class="col-xs-6">
+      <canvas id="today" width="100" height="100"></canvas>
+      <div class="condition">
+          <span class="date"></span><span id="weather"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+            <div class="panel-heading">Forecast</div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th id="tomorrow"></th>
+                  <th id="ttomorrow"></th>
+                  <th id="tttomorrow"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span id="tTemp"></span> &#8451;</td>
+                  <td><span id="ttTemp"></span> &#8451;</td>
+                  <td><span id="tttTemp"></span> &#8451;</td>
+                </tr>
+                <tr>
+                  <td><canvas id="day1" width="64" height="64">Clear</canvas></td>
+                  <td><canvas id="day2" width="64" height="64">Mostly Sunny</canvas></td>
+                  <td><canvas id="day3" width="64" height="64">Mostly Cloudy</canvas></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/RadianSmile/9e48cd4fa58eaa04426f6de87f52c2a7/raw/017c2cda22d7e904f538da7f45de3750d3b6de91/assign5.getjson.patch.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://darkskyapp.github.io/skycons/skycons.js"></script>
+<script src="myapp.js"></script>
+</body>
+</html>
